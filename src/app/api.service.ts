@@ -24,4 +24,9 @@ export class ApiService {
     return this.http.post("http://localhost:8080/addComplaint",data);
     
   }
+
+  viewMyComplaint=(data:any)=>{
+    return this.http.post("http://localhost:8080/getComplaintById",data);
+    
+  }
 }

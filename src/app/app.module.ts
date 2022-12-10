@@ -14,6 +14,7 @@ import { UserNavComponent } from './user-nav/user-nav.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { AdminNavComponent } from './admin-nav/admin-nav.component';
 import { AddComplaintComponent } from './add-complaint/add-complaint.component';
+import { ViewUserComplaintComponent } from './view-user-complaint/view-user-complaint.component';
 
 let myRoute:Routes=[
   {
@@ -44,6 +45,10 @@ let myRoute:Routes=[
   {
     path:"addComplaint",
     component:AddComplaintComponent
+  },
+  {
+    path:"viewMyComplaint",
+    component:ViewUserComplaintComponent
   }
 
 ]
@@ -58,7 +63,8 @@ let myRoute:Routes=[
     UserNavComponent,
     DashbordComponent,
     AdminNavComponent,
-    AddComplaintComponent
+    AddComplaintComponent,
+    ViewUserComplaintComponent
   ],
   imports: [
     BrowserModule,
