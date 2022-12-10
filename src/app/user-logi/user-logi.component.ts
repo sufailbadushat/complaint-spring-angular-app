@@ -25,10 +25,10 @@ export class UserLogiComponent {
       (response:any)=>{
         if (response.status == "success") {
           console.log(data);
-
-         
-          alert("login successfull");
-          this.route.navigate([('/profile')])
+          let userId=response.id
+          localStorage.setItem("userId",userId)
+          console.log(userId);          
+          this.route.navigate([('/userProfile')])
         } else {
           alert("Please enter correct credentials!");
         }
