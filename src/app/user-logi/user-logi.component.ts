@@ -23,8 +23,10 @@ export class UserLogiComponent {
 
     this.api.userLogin(data).subscribe(
       (response:any)=>{
-        if (response.length != 0) {
+        if (response.status == "success") {
           console.log(data);
+
+         
           alert("login successfull");
           this.route.navigate([('/profile')])
         } else {
@@ -34,4 +36,4 @@ export class UserLogiComponent {
     )
     
   }
-}
+} 
