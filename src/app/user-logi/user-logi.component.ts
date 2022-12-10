@@ -28,7 +28,7 @@ export class UserLogiComponent {
           let userId=response.id
           localStorage.setItem("userId",userId)
           console.log(userId);          
-          this.route.navigate([('/userProfile')])
+          this.route.navigate([('/addComplaint')])
         } else {
           alert("Please enter correct credentials!");
         }
