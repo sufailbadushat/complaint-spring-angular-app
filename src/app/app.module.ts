@@ -10,6 +10,7 @@ import { UserRegiComponent } from './user-regi/user-regi.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserLogiComponent } from './user-logi/user-logi.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserNavComponent } from './user-nav/user-nav.component';
 
 let myRoute:Routes=[
   {
@@ -41,7 +42,8 @@ let myRoute:Routes=[
     AdminLoginComponent,
     UserRegiComponent,
     UserLogiComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    UserNavComponent
   ],
   imports: [
     BrowserModule,
