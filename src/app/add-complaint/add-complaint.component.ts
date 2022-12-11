@@ -22,6 +22,13 @@ export class AddComplaintComponent {
     this.api.addComplaint(data).subscribe(
       (response:any)=>{
         console.log(response);
+        if (response.status=="success") {
+          alert("Submitted successfully!");
+          this.userId=""
+          this.complaint=""
+        } else {
+          alert("Something went wrong!")
+        }
         
       }
     )
