@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-dashbord',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashbord.component.css']
 })
 export class DashbordComponent {
+  constructor(private api:ApiService){
+    api.viewAllComplaint().subscribe(
+      (response:any)=>{
+        this.allComplaints=response
+      }
+    )
+  }
 
+  allComplaints:any=[]
 }
